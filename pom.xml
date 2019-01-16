@@ -5,10 +5,10 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.sdk.makers</groupId>
-    <artifactId>my_sdk</artifactId>
-    <version>0.1</version>
+    <artifactId>polymyseum-sdk</artifactId>
+    <version>1.1</version>
 
-    <name>my_sdk</name>
+    <name>polymyseum-sdk</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
