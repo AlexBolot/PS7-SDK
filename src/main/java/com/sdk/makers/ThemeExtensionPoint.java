@@ -3,6 +3,7 @@ package com.sdk.makers;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.Callable;
 
 /**
@@ -14,7 +15,7 @@ import java.util.concurrent.Callable;
 public class ThemeExtensionPoint extends ExtensionPoint {
 
     private List<ThemePlugin> plugins = new ArrayList<>();
-    private HashMap<String, Object> resultOfProcess = new HashMap<>();
+
 
     /**
      * Allows a ThemePlugin to attach to this.
@@ -45,7 +46,8 @@ public class ThemeExtensionPoint extends ExtensionPoint {
      *
      * @return Map of values containing the result of method calls
      */
-    public HashMap<String, Object> processPlugins() {
+    @Override
+    public Map<String, Object> processPlugins() {
 
         for (ThemePlugin themePlugin : plugins) {
             processMethod(themePlugin::getPrimaryColor, themePlugin.getName(), "getPrimaryColor()");
@@ -62,7 +64,7 @@ public class ThemeExtensionPoint extends ExtensionPoint {
      * <p>
      * If a method call throws an Exception, we just print the message and keep parsing other methods and plugins
      *
-     * @param methodToCall Callable paramter of the method to process
+     * @param methodToCall Callable parameter of the method to process
      * @param pluginName   Name of the plugin being processes, for print purposes only
      * @param methodName   Name of the method being called, used as key in [resultOfProcess]
      */

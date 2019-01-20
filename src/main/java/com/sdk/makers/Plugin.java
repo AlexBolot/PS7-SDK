@@ -12,6 +12,7 @@ public abstract class Plugin {
     public abstract PluginType getPluginType();
 
     public enum PluginType{
-        THEME_PLUGIN
+        THEME_PLUGIN,
+        CUSTOM_VIEW_PLUGIN
     }
 }

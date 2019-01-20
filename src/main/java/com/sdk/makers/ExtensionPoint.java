@@ -13,7 +13,20 @@ import java.util.Map;
  */
 public abstract class ExtensionPoint {
 
+    protected HashMap<String, Object> resultOfProcess = new HashMap<>();
+
     private Map<PluginType, JSONObject> configFiles = new HashMap<>();
+
+    /**
+     * Processes all plugins attached to this.
+     * <p>
+     * </pre>
+     * <p>
+     * And then adds their return value to the [resultOfProcess]
+     *
+     * @return Map of values containing the result of method calls
+     */
+    public abstract Map<String, Object> processPlugins();
 
     /**
      * Make a JSON config available to all Plugins matching [pluginType]

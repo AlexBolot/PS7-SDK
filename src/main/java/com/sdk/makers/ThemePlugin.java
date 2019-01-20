@@ -13,7 +13,7 @@ public abstract class ThemePlugin extends Plugin {
     /**
      * Attaches this to a given [themeExtensionPoint].
      *
-     * @param themeExtensionPoint ThemeExtensionPoint to wich attach this
+     * @param themeExtensionPoint ThemeExtensionPoint to which attach this
      */
     public void plugTo(ThemeExtensionPoint themeExtensionPoint) {
         this.themeExtensionPoint = themeExtensionPoint;
