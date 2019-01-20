@@ -5,6 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * This class is defines a more specialized kind of Extension Point, able to process CustomViewPlugins
+ * <p>
+ * Its purpose is to allow CustomViewPlugins to attach to itself and then process a Map of values from its list of CustomViewPlugins
+ */
 public class CustomViewExtensionPoint extends ExtensionPoint {
 
     private List<CustomViewPlugin> plugins = new ArrayList<>();
@@ -24,8 +29,6 @@ public class CustomViewExtensionPoint extends ExtensionPoint {
 
     /**
      * Processes all plugins attached to this.
-     * <p>
-     * </pre>
      * <p>
      * And then adds their return value to the [resultOfProcess]
      *

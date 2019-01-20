@@ -5,7 +5,10 @@ import org.json.JSONObject;
 import java.util.List;
 
 /**
- * TODO
+ * This class is the abstract definition of a CustomViewPlugin
+ * <p>
+ * Its main purpose is to enforce definition of methods (like an interface would do).
+ * It also contains the reference and method used to attach to a CustomViewExtensionPoint.
  */
 public abstract class CustomViewPlugin extends Plugin {
 
@@ -21,6 +24,9 @@ public abstract class CustomViewPlugin extends Plugin {
         this.customViewExtensionPoint.registerAsPlugin(this);
     }
 
+    /**
+     * @return a {List} of {JSONObject} representing a view
+     */
     public abstract List<JSONObject> getViews();
 
 }
