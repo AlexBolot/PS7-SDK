@@ -29,4 +29,14 @@ public abstract class CustomViewPlugin extends Plugin {
      */
     public abstract List<JSONObject> getViews();
 
+
+    /**
+     * Handles a call to [methodName]. This call is sent on broadcast to all plugins of the same extensionPoint
+     * <p>
+     * The implementation of this needs to checks the value of [methodName] and act in consequence
+     *
+     * @param methodName
+     */
+    public abstract void reactToMethod(String methodName);
+
 }

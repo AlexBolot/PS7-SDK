@@ -41,4 +41,20 @@ public class CustomViewExtensionPoint extends ExtensionPoint {
         }
         return resultOfProcess;
     }
+
+    /**
+     * Used in reaction to an event triggered from a Custom Generatied
+     * @param methodName
+     */
+    public void broadCastTrigger(String methodName) {
+        for (CustomViewPlugin plugin : plugins) {
+            try {
+                plugin.reactToMethod(methodName);
+            } catch (Exception exception) {
+                System.out.println("----- Exception raised during broadcast of \"" + methodName + "\" to " + plugin.getName() + " -----");
+                exception.printStackTrace();
+                System.out.println("--------------------------------------------------");
+            }
+        }
+    }
 }
