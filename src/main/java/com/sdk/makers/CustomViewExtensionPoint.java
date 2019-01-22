@@ -43,8 +43,8 @@ public class CustomViewExtensionPoint extends ExtensionPoint {
     }
 
     /**
-     * Used in reaction to an event triggered from a Custom Generatied
-     * @param methodName
+     * Used in reaction to an event triggered from a Custom View
+     * @param methodName Method called from the App
      */
     public void broadCastTrigger(String methodName) {
         for (CustomViewPlugin plugin : plugins) {
