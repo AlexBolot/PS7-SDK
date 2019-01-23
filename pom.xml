@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.sdk.makers</groupId>
     <artifactId>polymyseum-sdk</artifactId>
-    <version>1.4</version>
+    <version>1.5</version>
 
     <name>polymyseum-sdk</name>
     <url>http://www.example.com</url>
