@@ -21,7 +21,7 @@ import java.util.List;
 public class Row extends MultipleChildrenWidget {
 
     public Row() {
-        super("Column");
+        super("Row");
     }
 
     /**
